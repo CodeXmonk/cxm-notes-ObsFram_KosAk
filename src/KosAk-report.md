@@ -6,11 +6,11 @@ title: KosAk report
 
 This report is a brief overview of the history and current state of rocket launches and space exploration.
 
-## Background
+## Forrás
 
 A morfológiai életkor meghatározásához - melyet Mészáros János alapján (1990) ismertetünk - a következő változók ismerete szükséges: a személy naptári életkora decimális értékben (DCK), a testmagasság (TTM), a testtömeg (TTS) és a plasztikus index (PLX). Az első háromról már említést tettünk. A PLX a csontozatra és az izomzatra jellemző három mérőszám aritmetikai összege, azaz PLX = VAS + AKK + KZK, ahol a VAS = vállszélesség, AKK = alkarkerület, KZK = kézkerület (mindhárom cm-ben kifejezve).
 
-## The Space Shuttle era
+## Diagram
 
 ```js
 const male = FileAttachment("data/male.csv").csv({typed: true});
