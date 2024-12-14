@@ -4,7 +4,7 @@ title: KosAk report
 
 # Első próba
 
-Az eredeti forrás alapján, változatlanul.
+Az eredeti forrás alapján, változatlanul (ASUS + IntelNUC).
 
 ## Forrás
 
