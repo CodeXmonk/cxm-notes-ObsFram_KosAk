@@ -1,5 +1,6 @@
 ---
 theme: dashboard
+style: custom-style.css
 title: Example dashboard
 toc: false
 ---
