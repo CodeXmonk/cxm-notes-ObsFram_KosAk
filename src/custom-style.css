@@ -1,7 +1,18 @@
 @import url("observablehq:default.css");
 @import url("observablehq:theme-sun-faded.css");
 
-th[title="TTM"]
-{
+th[title="TTM"]{
    color: red; /*var(--theme-red);*/
+}
+th[title="Perc"]{
+   color: yellow;
+}
+th[title="TTS"]{
+   color: green;
+}
+th[title="PLX"]{
+   color: lightblue;
+}
+p{
+  text-align: justify;
 }

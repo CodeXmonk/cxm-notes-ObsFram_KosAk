@@ -1,19 +1,13 @@
 ---
-title: KosAk report
+title: KosAk kalkulátor.
 ---
 
 # Első próba
 
-Az eredeti forrás alapján, változatlanul (ASUS + IntelNUC).
+Az eredeti forrás alapján, változatlanul (GitHub from ASUS + IntelNUC).
 
-<div class="tip">This is a tip.</div>
-
-## Forrás
-
-<span style="color:blue">some *blue* text</span>
-
-A morfológiai életkor meghatározásához - melyet Mészáros János alapján (1990) ismertetünk - a következő változók ismerete szükséges: a személy naptári életkora decimális értékben (DCK), a testmagasság (TTM), a testtömeg (TTS) és a plasztikus index (PLX). Az első háromról már említést tettünk. A PLX a csontozatra és az izomzatra jellemző három mérőszám aritmetikai összege, azaz PLX = VAS + AKK + KZK, ahol a VAS = vállszélesség, AKK = alkarkerület, KZK = kézkerület (mindhárom cm-ben kifejezve).
-
+## Kalkuláció
+<BEVITELI MEZŐK> jönnek ide.
 ## Diagram
 
 ```js
@@ -31,47 +25,21 @@ Plot.plot({
     Plot.line(TM_data, {x: "age", y: "TTM", stroke: "red"}),
     Plot.line(TM_data, {x: "age", y: "Perc", stroke: "yellow"}),
     Plot.line(TM_data, {x: "age", y: "TTS", stroke: "green"}),
-    Plot.line(TM_data, {x: "age", y: "PLX", stroke: "lightblue"})
+    Plot.line(TM_data, {x: "age", y: "PLX", stroke: "lightblue"}),
+    Plot.gridX({interval: 1})
   ]
 })
 ```
 
-```js
-// Import into your own notebook first
-//import {textcolor} from "@observablehq/text-color-annotations-in-markdown"
-function textcolor(content, style = {}) {
-  function yiq(color) {
-    const {r, g, b} = d3.rgb(color);
-    return (r * 299 + g * 587 + b * 114) / 1000 / 255; // returns values between 0 and 1
-  }
-  const {
-    background,
-    color = yiq(background) >= 0.6 ? "#111" : "white", 
-    padding = "0 5px",
-    borderRadius = "4px",
-    fontWeight = 800,
-    ...rest
-  } = typeof style === "string" ? {background: style} : style;
-  return htl.html`<span style=${{
-    background, 
-    color, 
-    padding, 
-    borderRadius, 
-    fontWeight, 
-    ...rest
-  }}>${content}</span>`;
-}
-```
+## Táblázat (fiúk)
 
-## Táblázat
+<span style="color:red">TTM</span> = testmagasság;
+<span style="color:yellow">Perc</span> = a testmagasság a 18 éves életkori érték százalékában kifejezve;
+<span style="color:green">TTS</span> = testtömeg;
+<span style="color:lightblue">PLX</span> = plasztikus index
+
 ```js
 Inputs.table(male, {
-  header: {
-//    age: ${textcolor("Age", 'darkgreen')},
-//    age:  textcolor("Age", {background: '#111111', color: 'red'}),
-//    TTM:  textcolor("TTM", {background: '#111111', color: 'red'}),
-//      age: "Age",
-  },
 	format: {
 		age: (x) => x.toFixed(2), 
 		TTM: (x) => x.toFixed(2),
