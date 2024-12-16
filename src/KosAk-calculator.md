@@ -1,5 +1,5 @@
 ---
-title: 03 KosAk kalkulátor.
+title: KosAk kalkulátor.
 ---
 
 # Első próba

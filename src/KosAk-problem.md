@@ -1,5 +1,5 @@
 ---
-title: 01 KosAk probléma
+title: KosAk probléma
 ---
 
 # Ellenőrző bemutató

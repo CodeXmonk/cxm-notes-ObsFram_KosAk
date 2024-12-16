@@ -1,5 +1,5 @@
 ---
-title: 02 KosAk eredeti cikk.
+title: KosAk eredeti cikk.
 ---
 
 # Első próba

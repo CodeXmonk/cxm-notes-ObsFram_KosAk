@@ -1,5 +1,5 @@
 ---
-title: 04 KosAk riport.
+title: KosAk riport.
 ---
 
 # Első próba
@@ -11,27 +11,12 @@ Az eredeti forrás alapján, változatlanul (GitHub from ASUS + IntelNUC).
 ## Diagram
 
 ```js
-const male = FileAttachment("data/male.csv").csv({typed: true});
+const male = FileAttachment("data/KosAk_2024_12_16_small.csv").csv({typed: true});
 let TM_data = male;
 ```
 
-```js
 
-
-Plot.plot({
-  y: { domain: [0, 200], grid: true, label: "TTM"},
-  marks: [
-    Plot.ruleY([0]),
-    Plot.line(TM_data, {x: "age", y: "TTM", stroke: "red"}),
-    Plot.line(TM_data, {x: "age", y: "Perc", stroke: "yellow"}),
-    Plot.line(TM_data, {x: "age", y: "TTS", stroke: "green"}),
-    Plot.line(TM_data, {x: "age", y: "PLX", stroke: "lightblue"}),
-    Plot.gridX({interval: 1})
-  ]
-})
-```
-
-## Táblázat (fiúk)
+## Táblázat
 
 <span style="color:red">TTM</span> = testmagasság;
 <span style="color:yellow">Perc</span> = a testmagasság a 18 éves életkori érték százalékában kifejezve;
@@ -40,12 +25,54 @@ Plot.plot({
 
 ```js
 Inputs.table(male, {
+  columns: [
+    "id",
+    "Gender_Choosen",
+    "DateOfBirth",
+    "DCK_value",
+    "BecsTM",
+    "TTM_kor_minus_nearest_decimal_age",
+    "TTM_value",
+    "TTS_value",
+    "VAS_value",
+    "AKK_value",
+    "KZK_value",
+    "PLX_value"
+  ],
+  align: {
+    id: "right",
+    Gender_Choosen: "center",
+    DateOfBirth: "center",
+    DCK_value: "center",
+    BecsTM: "center",
+    TTM_kor_minus_nearest_decimal_age: "center"
+  },
+  header: {
+    id: "id",
+    Gender_Choosen: "Nem",
+    DateOfBirth: "Születés",
+    DCK_value: "Dec.kor",
+    BecsTM: "Becs. magasság",
+    TTM_kor_minus_nearest_decimal_age: "TTMk-DCK",
+    TTM_value: "TTM",
+    TTS_value: "TTS",
+    VAS_value: "VAS",
+    AKK_value: "AKK",
+    KZK_value: "KZK",
+    PLX_value: "PLX"
+  },
 	format: {
-		age: (x) => x.toFixed(2), 
-		TTM: (x) => x.toFixed(2),
-		Perc: (x) => x.toFixed(2),
-		TTS: (x) => x.toFixed(2),
-		PLX: (x) => x.toFixed(2)
+		id: (x) => x.toFixed(0), 
+		Gender_Choosen: (x) => x.toFixed(0),
+		DCK_value: (x) => x.toFixed(2),
+		BecsTM: (x) => x.toFixed(2),
+		TTM_kor_minus_nearest_decimal_age: (x) => x.toFixed(2),
+		TTM_value: (x) => x.toFixed(2),
+		TTS_value: (x) => x.toFixed(2),
+		VAS_value: (x) => x.toFixed(2),
+		AKK_value: (x) => x.toFixed(2),
+		KZK_value: (x) => x.toFixed(2),
+		PLX_value: (x) => x.toFixed(2)
 	}
 })
 ```
