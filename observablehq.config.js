@@ -15,7 +15,12 @@ export default {
   //     ]
   //   }
   // ],
-
+  pages: [
+    {name: "KosAk probléma", path: "/KosAk-problem"},
+    {name: "KosAk eredeti cikk", path: "/KosAk-article"},
+    {name: "KosAk kalkulátor", path: "/KosAk-calculator"},
+    {name: "KosAk riport", path: "/KosAk-report"}
+  ],
   // Content to add to the head of the page, e.g. for a favicon:
   head: '<link rel="icon" href="observable.png" type="image/png" sizes="32x32">',
 
