@@ -59,19 +59,12 @@ function markings({
     </g>`;
   };
 }
+
 ```
 
-## LeBron James’ shots (2003-2024)
-<!--div class="card" style="display: flex; flex-direction: column; gap: 1rem;max-width: 640px;"-->
-<!--https://observablehq.com/@observablehq/plot-lebron-james-shots-->
-
-<!--div class="card">
-  ${resize((width) => Plot.plot({
-  }))}
-</div-->
-  
-<div class="card center">
-  ${resize((width) => Plot.plot({
+<div class="card" style="max-width: 640px; margin: auto">
+${resize((width) => Plot.plot({
+    //width: 600,
     height: 640,
     axis: null,
     x: {domain: [-250, 250]},
@@ -85,6 +78,32 @@ function markings({
     ]
   }))}
 </div>
+
+## LeBron James’ shots (2003-2024)
+<!--div class="card" style="display: flex; flex-direction: column; gap: 1rem;max-width: 640px;"-->
+<!--https://observablehq.com/@observablehq/plot-lebron-james-shots-->
+
+<!--div class="card">
+  ${resize((width) => Plot.plot({
+  }))}
+</div-->
+  
+<!--div class="center">
+  ${resize((width) => Plot.plot({
+  width,
+    height: 640,
+    axis: null,
+    x: {domain: [-250, 250]},
+    y: {domain: [-50, 450]},
+    color: {type: "log", scheme: "ylgnbu", legend: true, label: "Made shots"},
+    marks: [
+      Plot.rect(shots, Plot.bin({fill: "count"}, {x: "loc_x", y: "loc_y", filter: d => +d.shot_made_flag, inset: 0, interval: 5})),
+      Plot.gridX({interval: 5, strokeOpacity: 0.05}),
+      Plot.gridY({interval: 5, strokeOpacity: 0.05}),
+      markings()
+    ]
+  }))}
+</div-->
 
 <!--div id="observablehq-ff7a90f4"></div>
 <p>Credit: <a href="https://observablehq.com/d/db0a303ce8c90c89">LeBron James shot chart by Mitchell Thorson</a></p>
