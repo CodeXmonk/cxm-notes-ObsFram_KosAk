@@ -64,23 +64,26 @@ function markings({
 ## LeBron James’ shots (2003-2024)
 <!--div class="card" style="display: flex; flex-direction: column; gap: 1rem;max-width: 640px;"-->
 <!--https://observablehq.com/@observablehq/plot-lebron-james-shots-->
-<div class="box box-2 card">
-${resize((width) => Plot.plot({
-  //marginRight: auto,
-  //marginBottom: 'auto',
-    width,
-  height: 640,
-  axis: null,
-  x: {domain: [-250, 250]},
-  y: {domain: [-50, 450]},
-  color: {type: "log", scheme: "ylgnbu", legend: true, label: "Made shots"},
-  marks: [
-    Plot.rect(shots, Plot.bin({fill: "count"}, {x: "loc_x", y: "loc_y", filter: d => +d.shot_made_flag, inset: 0, interval: 5})),
-    Plot.gridX({interval: 5, strokeOpacity: 0.05}),
-    Plot.gridY({interval: 5, strokeOpacity: 0.05}),
-    markings()
-  ]
-}))}
+
+<!--div class="card">
+  ${resize((width) => Plot.plot({
+  }))}
+</div-->
+  
+<div class="card center">
+  ${resize((width) => Plot.plot({
+    height: 640,
+    axis: null,
+    x: {domain: [-250, 250]},
+    y: {domain: [-50, 450]},
+    color: {type: "log", scheme: "ylgnbu", legend: true, label: "Made shots"},
+    marks: [
+      Plot.rect(shots, Plot.bin({fill: "count"}, {x: "loc_x", y: "loc_y", filter: d => +d.shot_made_flag, inset: 0, interval: 5})),
+      Plot.gridX({interval: 5, strokeOpacity: 0.05}),
+      Plot.gridY({interval: 5, strokeOpacity: 0.05}),
+      markings()
+    ]
+  }))}
 </div>
 
 <!--div id="observablehq-ff7a90f4"></div>
@@ -185,6 +188,13 @@ new Runtime().module(define, Inspector.into("#observablehq-ff7a90f4"));
   color: var(--theme-foreground-muted);
 }
 
+  .center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    text-align: center; /*  center out item horizontally  */
+  }
+  
   .box-2 {
     width: ${width}px;
     display: flex; /* make the container div to make it a flex item. */
