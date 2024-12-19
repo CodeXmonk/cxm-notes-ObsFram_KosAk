@@ -1,4 +1,4 @@
-# KosAk
+# [KosAk](https://github/codexmonk.github.io/cxm-notes-ObsFram_KosAk)
 
 This is an [Observable Framework](https://observablehq.com/framework/) app. To install the required dependencies, run:
 
