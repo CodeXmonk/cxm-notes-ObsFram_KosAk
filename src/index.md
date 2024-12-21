@@ -79,16 +79,15 @@ const LeBron_image = FileAttachment("./data/lebron.png").image({width: 120})
 ```
 <!--div class="grid grid-cols-2"-->
 <div class="grid grid-cols-2">
-	<div class="card">
+	<div class="card" style="font-size: 20px; text-align:center">
+		<h2 style="font-size: 20px;"> LeBron James Shooting</h2>
 		<div style="float:left;">
 			${LeBron_image}
 		</div>
-		<div style="float:right; font-size: 20px; text-align:center">
-			LeBron James’ shots
+		<div style="float:right;">
 				<br /><br />
 			2003-2024
 				<br /><br />
-			(27806 db.)
 		</div>
 	</div>
 	<div  class="card" style="justify-content: center">
@@ -106,7 +105,6 @@ const LeBron_image = FileAttachment("./data/lebron.png").image({width: 120})
 const cxm_start = x +'-01-01'
 const cxm_end = (x + 1) +'-01-01'
 ```
-## LeBron James’ shots (2003-2024; 27807 db.)
 
 <div class="card" style="max-width: 640px; margin: auto">
 <!--h2>LeBron James’ shots (2003-2024)</h2-->
