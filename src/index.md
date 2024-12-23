@@ -99,7 +99,8 @@ const LeBron_image = FileAttachment("./data/lebron.png").image({width: 120})
 </div>
 
 <div class="center">
-	Amikor vannak jó adataink és jól bánunk velük, akkor ilyesmikre leszünk képesek.<br />
+	Amikor vannak jó adataink és jól bánunk velük, akkor ilyesmikre leszünk képesek.
+	<br />
 	Állítsátok be a kérdéses évet és meglátjuk miket/honnan dobot!?
 </div>
 
