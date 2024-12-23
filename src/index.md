@@ -98,6 +98,11 @@ const LeBron_image = FileAttachment("./data/lebron.png").image({width: 120})
 	</div>
 </div>
 
+<div class="center">
+	Amikor vannak jó adataink és jól bánunk velük, akkor ilyesmikre leszünk képesek.<br />
+	Állítsátok be a kérdéses évet és meglátjuk miket/honnan dobot!?
+</div>
+
 <!-- x = ${x} to markdown
 ![LeBron](./data/lebron.png)
 -->
@@ -105,9 +110,7 @@ const LeBron_image = FileAttachment("./data/lebron.png").image({width: 120})
 const cxm_start = x +'-01-01'
 const cxm_end = (x + 1) +'-01-01'
 ```
-
 <div class="card" style="max-width: 640px; margin: auto">
-<!--h2>LeBron James’ shots (2003-2024)</h2-->
 ${view(xview)}
 ${resize((width) => Plot.plot({
     //width: 600,
